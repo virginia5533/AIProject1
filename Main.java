@@ -81,6 +81,9 @@ public class Main {
   }while(!validPlay);
 
   System.out.println("/..Implementing Move../");
+  //code to print updated board
+
+  System.out.println("/..AI Processing Move../");
 
   }//while game loop
            

@@ -45,7 +45,7 @@ public class Main {
   System.out.println("");
   }
   
-  System.out.println("Is a " + M + " x " + M + " board ok? (y/n):");
+  System.out.println("Is a " + M + " x " + M + " board ok? (yes/no):");
   
   answer = scanner.nextLine();
   

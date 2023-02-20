@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class Main {
 
+  
+
   public static void main(String[] args) {
 
     Scanner scanner = new Scanner(System.in);
@@ -10,6 +12,7 @@ public class Main {
     Boolean validPlay = false;
     String answer = "";
     int M = -1;
+    int[][] boardArray;
 
     System.out.println(
         "+====================================================+\n" +
@@ -59,6 +62,10 @@ public class Main {
 
 } while(!verifyM);
   /*System.out.println(M);*/
+  boardArray = new int[M][M];
+  printArray(boardArray, M);
+  
+  System.out.println();
 
   System.out.println("Alright! Make the first move by entering the column number:");
   while(!gameOver){
@@ -89,6 +96,18 @@ public class Main {
            
   scanner.close();
   
+}
+
+public static void printArray(int[][] boardArr, int M){
+
+  for(int j = 0; j < M; j++){
+    for(int i = 0; i < M; i++){
+      System.out.print(boardArr[i][j]);
+    }
+    System.out.println();
+    
+  }
+
 }
 
 }

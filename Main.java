@@ -4,12 +4,12 @@ public class Main {
 
   public static void main(String[] args) {
 
-    Scanner scanner = new Scanner(System.in);
-    Boolean verifyM = false;
+
+  
     Boolean gameOver = false;
     Boolean validPlay = false;
-    String answer = "";
-    int M = -1;
+    
+    
 
     System.out.println(
         "+====================================================+\n" +
@@ -22,43 +22,24 @@ public class Main {
         "|                                                    |\n" +
         "+====================================================+\n");
 
- do {   
-       
-  
-  System.out.println("Please enter how big you would like the board in the form of ONE integer\n" + "(For example, 3 generates 3 x 3) ");
-  M = scanner.nextInt();
-  
-  scanner.nextLine();
+ 
 
-  for(int i = 0; i < M*2 + 1; i++){
-    System.out.print("-");
-  }
-  System.out.println("");
-  for(int i = 0; i < M; i++){
-  for(int x = 0; x < M; x++){
-    System.out.print("| ");
-  }
-  System.out.println("|");
-  for(int y = 0; y < M*2+1; y++){
-    System.out.print("-");
-  }
-  System.out.println("");
-  }
-  
-  System.out.println("Is a " + M + " x " + M + " board ok? (yes/no):");
-  
-  answer = scanner.nextLine();
-  
 
-  if(answer.equals("yes") == true){
   
-    verifyM = true;
-     
-    
-  }
-
-} while(!verifyM);
   /*System.out.println(M);*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   System.out.println("Alright! Make the first move by entering the column number:");
   while(!gameOver){

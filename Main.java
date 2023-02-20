@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class Main {
 
+  
+
   public static void main(String[] args) {
 
 
@@ -27,6 +29,10 @@ public class Main {
 
   
   /*System.out.println(M);*/
+  boardArray = new int[M][M];
+  printArray(boardArray, M);
+  
+  System.out.println();
 
 
 
@@ -70,6 +76,18 @@ public class Main {
            
   scanner.close();
   
+}
+
+public static void printArray(int[][] boardArr, int M){
+
+  for(int j = 0; j < M; j++){
+    for(int i = 0; i < M; i++){
+      System.out.print(boardArr[i][j]);
+    }
+    System.out.println();
+    
+  }
+
 }
 
 }

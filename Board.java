@@ -65,7 +65,7 @@ public class Board {
 
         for(int row = 0; row < N; row++){
             for(int col = 0; col < N; col++){
-              System.out.print(board[row][col]);
+              System.out.print(board[row][col] + " ");
             }
             System.out.println();
             

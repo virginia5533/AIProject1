@@ -54,7 +54,7 @@ public class Main {
 
 
   //begins moves with StartGame function Gameplay with the Board created
-  game.Gameplay(gameBoard);
+  game.Gameplay(gameBoard, scanner);
 
   
 

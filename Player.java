@@ -2,42 +2,50 @@ import java.util.Scanner;
 
 public class Player {
 
-    public int[][] PlayerMove(int[][] board, int N, int H){
+    public int[][] PlayerMove(int[][] board, int N, int H, Scanner scanner){
 
-        Scanner scanner = new Scanner(System.in);
 
         //valid col is set to false until it is verified as a playable space
         Boolean isValidCol = false;
         int colNum = -1;
+        
 
 
         System.out.println("/**Player Move**/");
 
        while((isValidCol == false)){
 
+        
         System.out.println("Please enter a number between 1 and " + N);
 
-
+        //while loop ensures a number between 1 and N is input    
         //scans in user input for the column #, subtracting 1 for the index of 2D array
-        
-        colNum = scanner.nextInt()-1;
-        
+       while((!scanner.hasNextInt())){
+        System.out.println("Please enter a number between 1 and " + N);
+        scanner.next();
+       }
+       int input = scanner.nextInt()-1;
 
-        //Checks top space of selected column to see if column is full
-        if(board[0][colNum] != 0){
-            System.out.println("Column is full, please try again.");
+
+            if(input < 0 || input >= N){
+                System.out.println("Number is out of range, please enter a number between 1 and " + N);
+                continue;
+            }
+            //Checks top space of selected column to see if column is full
             
-        }
-
-        //When column is not full and selected column is playable (<= N) the colNum is verified and breaks while loop
-        else if((colNum >= 0) && (colNum < N)){
-            isValidCol = true;
-        }
+            else{
+                if(board[0][input] != 0){
+                    System.out.println("Column is full");
+                }
+                else {
+                colNum = input;
+                isValidCol = true;
+                }
+            }
 
         
         }//while loop
-        
-
+            
 
         //loops each row for that column to place player's newest move on top of any previous
         for(int row = N-1; row >= 0; row--){

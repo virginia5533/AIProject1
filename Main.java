@@ -12,6 +12,8 @@ public class Main {
 
     //create gameBoard object
     Board gameBoard = new Board();
+    StartGame game = new StartGame();
+
   
     Boolean gameOver = false;
     Boolean validPlay = false;
@@ -54,6 +56,10 @@ public class Main {
 
   //calls Board object function printBoard
   gameBoard.printBoard();
+
+  game.Gameplay(gameBoard);
+
+  
 
   scanner.close();
 

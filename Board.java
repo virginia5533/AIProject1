@@ -41,7 +41,7 @@ public class Board {
         H = initH;
     }
 
-    public static  int GetN(){
+    public  int GetN(){
         return N;
     }
 
@@ -49,7 +49,7 @@ public class Board {
         return M;
     }
 
-    public static int GetH(){
+    public int GetH(){
         return H;
     }
 
@@ -57,14 +57,14 @@ public class Board {
         board = initboard;
     }
 
-    public static int[][] GetBoard(){
+    public int[][] GetBoard(){
         return board;
     }
 
     public void printBoard() {
 
-        for(int col = 0; col < N; col++){
-            for(int row = 0; row < N; row++){
+        for(int row = 0; row < N; row++){
+            for(int col = 0; col < N; col++){
               System.out.print(board[row][col]);
             }
             System.out.println();

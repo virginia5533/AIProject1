@@ -7,6 +7,11 @@ public class Main {
   public static void main(String[] args) {
 
 
+    //create scanner object
+    Scanner scanner = new Scanner(System.in);
+
+    //create gameBoard object
+    Board gameBoard = new Board();
   
     Boolean gameOver = false;
     Boolean validPlay = false;
@@ -24,11 +29,37 @@ public class Main {
         "|                                                    |\n" +
         "+====================================================+\n");
 
- 
+  //scans in connectM
+  scanner.next();
 
+  //created variable for input N from user input
+  //calls setter for N
+  int userN = scanner.nextInt();
+  gameBoard.SetN(userN);
 
+  //created variable for input M from user input
+  //calls setter for M
+  int userM = scanner.nextInt();
+  gameBoard.SetM(userM);
+
+  //created variable for input H from user input
+  //calls setter for H
+  int userH = scanner.nextInt();
+  gameBoard.SetH(userH);
+
+  //System.out.print(Board.GetN() + " " + Board.GetM() + " " + Board.GetH());
+
+  //calls Board object function CreateBoard
+  gameBoard.CreateBoard();
+
+  //calls Board object function printBoard
+  gameBoard.printBoard();
+
+  scanner.close();
+
+/*
   
-  /*System.out.println(M);*/
+  /*System.out.println(M);
   boardArray = new int[M][M];
   printArray(boardArray, M);
   
@@ -90,4 +121,9 @@ public static void printArray(int[][] boardArr, int M){
 
 }
 
+}
+
+*/
+
+  }
 }

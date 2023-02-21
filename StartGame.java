@@ -2,6 +2,10 @@ public class StartGame extends Main {
     
     public void Gameplay(Board gameBoard){
 
+        Boolean gameOver = false;
+
+        while(gameOver == false){
+
         //Player object
         Player player = new Player();
 
@@ -14,5 +18,6 @@ public class StartGame extends Main {
 
         
     }
+}
 
 }

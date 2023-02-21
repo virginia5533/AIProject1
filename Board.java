@@ -1,4 +1,4 @@
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class Board {
     private static int[][]  board;
@@ -10,7 +10,7 @@ public class Board {
     private static int H = -1;
 
    
-
+    //Uses N to create a NxN 2D array with values = 0
     public int[][] CreateBoard() {
         
         
@@ -61,6 +61,7 @@ public class Board {
         return board;
     }
 
+    //Prints out 2D array with " "
     public void printBoard() {
 
         for(int row = 0; row < N; row++){

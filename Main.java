@@ -13,10 +13,6 @@ public class Main {
     //create gameBoard object
     Board gameBoard = new Board();
     StartGame game = new StartGame();
-
-  
-    Boolean gameOver = false;
-    Boolean validPlay = false;
     
     
 
@@ -49,7 +45,6 @@ public class Main {
   int userH = scanner.nextInt();
   gameBoard.SetH(userH);
 
-  //System.out.print(Board.GetN() + " " + Board.GetM() + " " + Board.GetH());
 
   //calls Board object function CreateBoard
   gameBoard.CreateBoard();
@@ -57,79 +52,15 @@ public class Main {
   //calls Board object function printBoard
   gameBoard.printBoard();
 
+
+  //begins moves with StartGame function Gameplay with the Board created
   game.Gameplay(gameBoard);
 
   
 
   scanner.close();
 
-/*
-  
-  /*System.out.println(M);
-  boardArray = new int[M][M];
-  printArray(boardArray, M);
-  
-  System.out.println();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  System.out.println("Alright! Make the first move by entering the column number:");
-  while(!gameOver){
-  
-
-  do {
-
-    System.out.println("*PLAYER MOVE*");
-    int playColumn = scanner.nextInt();
-    scanner.nextLine();
-
-    if(playColumn < M){
-        validPlay = true;
-    }
-    else {
-        System.out.println("Sorry, that column is out of range. Pick a column between 1 and " + M);
-    }
-
-    
-  }while(!validPlay);
-
-  System.out.println("/..Implementing Move../");
-  //code to print updated board
-
-  System.out.println("/..AI Processing Move../");
-
-  }//while game loop
-           
-  scanner.close();
-  
-}
-
-public static void printArray(int[][] boardArr, int M){
-
-  for(int j = 0; j < M; j++){
-    for(int i = 0; i < M; i++){
-      System.out.print(boardArr[i][j]);
-    }
-    System.out.println();
-    
-  }
-
-}
-
-}
-
-*/
 
   }
 }

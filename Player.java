@@ -13,13 +13,15 @@ public class Player {
 
         System.out.println("/**Player Move**/");
 
-       while(isValidCol == false){
+       while((isValidCol == false)){
 
         System.out.println("Please enter a number between 1 and " + N);
 
 
         //scans in user input for the column #, subtracting 1 for the index of 2D array
+        
         colNum = scanner.nextInt()-1;
+        
 
         //Checks top space of selected column to see if column is full
         if(board[0][colNum] != 0){
@@ -34,16 +36,18 @@ public class Player {
 
         
         }//while loop
-        scanner.close();
+        
 
 
         //loops each row for that column to place player's newest move on top of any previous
         for(int row = N-1; row >= 0; row--){
             if(board[row][colNum] == 0){
+                //if player moved first
                 if(H == 0){
                 board[row][colNum] = 1;
                 break;
                 }
+                //if AI moved first
                 else {
                     board[row][colNum] = 2;
                     break;
@@ -53,7 +57,7 @@ public class Player {
         }
 
         
-        
+        //scanner.close();
         return board;
 
     }

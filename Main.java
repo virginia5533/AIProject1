@@ -4,8 +4,15 @@ public class Main {
 
   public static void main(String[] args) {
 
-    Boolean gameOver = false;
-    Boolean validPlay = false;
+
+    //create scanner object
+    Scanner scanner = new Scanner(System.in);
+
+    //create gameBoard object
+    Board gameBoard = new Board();
+    StartGame game = new StartGame();
+    
+    
 
     System.out.println(
         "+====================================================+\n" +
@@ -18,50 +25,40 @@ public class Main {
             "|                                                    |\n" +
             "+====================================================+\n");
 
-    /* System.out.println(M); */
-    boardArray = new int[M][M];
-    printArray(boardArray, M);
+  //scans in connectM
+  scanner.next();
 
-    System.out.println();
+  //created variable for input N from user input
+  //calls setter for N
+  int userN = scanner.nextInt();
+  gameBoard.SetN(userN);
 
-    System.out.println("Alright! Make the first move by entering the column number:");
-    while (!gameOver) {
+  //created variable for input M from user input
+  //calls setter for M
+  int userM = scanner.nextInt();
+  gameBoard.SetM(userM);
 
-      do {
+  //created variable for input H from user input
+  //calls setter for H
+  int userH = scanner.nextInt();
+  gameBoard.SetH(userH);
 
-        System.out.println("*PLAYER MOVE*");
-        int playColumn = scanner.nextInt();
-        scanner.nextLine();
 
-        if (playColumn < M) {
-          validPlay = true;
-        } else {
-          System.out.println("Sorry, that column is out of range. Pick a column between 1 and " + M);
-        }
+  //calls Board object function CreateBoard
+  gameBoard.CreateBoard();
 
-      } while (!validPlay);
+  //calls Board object function printBoard
+  gameBoard.printBoard();
 
-      System.out.println("/..Implementing Move../");
-      // code to print updated board
 
-      System.out.println("/..AI Processing Move../");
+  //begins moves with StartGame function Gameplay with the Board created
+  game.Gameplay(gameBoard, scanner);
 
-    } // while game loop
+  
 
-    scanner.close();
+  scanner.close();
 
-  }
 
-  public static void printArray(int[][] boardArr, int M) {
-
-    for (int j = 0; j < M; j++) {
-      for (int i = 0; i < M; i++) {
-        System.out.print(boardArr[i][j]);
-      }
-      System.out.println();
-
-    }
 
   }
-
 }

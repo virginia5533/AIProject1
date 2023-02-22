@@ -1,40 +1,77 @@
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class Board {
-    int[][] board;
-    int N = -1;
-    int M = -1;
-    int H = -1;
+    private static int[][]  board;
+    private static int N = -1;
+    int initN;
+    int initM;
+    int initH;
+    private static int M = -1;
+    private static int H = -1;
 
+   
+    //Uses N to create a NxN 2D array with values = 0
     public int[][] CreateBoard() {
-        Scanner scanner = new Scanner(System.in);
+        
         
 
         // Pre Executable testing input parameters N, M, H
 
-        System.out.println("Please enter N M H");
+        /*System.out.println("Please enter N M H");
         N = scanner.nextInt();
         M = scanner.nextInt();
-        H = scanner.nextInt();
+        H = scanner.nextInt();*/
 
-        scanner.nextLine();
-
-        System.out.println(N + " " + M + " " + H);
+        
         board = new int[N][N];
+        System.out.println("/** Generating " + N + "x" + N + " Board **/");
 
         return board;
     }
 
-    public int GetN(){
+    public void SetN(int initN) {
+        N = initN;
+    }
+
+    public void SetM(int initM) {
+        M = initM;
+    }
+
+    public void SetH(int initH) {
+        H = initH;
+    }
+
+    public  int GetN(){
         return N;
     }
 
-    public int GetM(){
+    public static int GetM(){
         return M;
     }
 
     public int GetH(){
         return H;
+    }
+
+    public void SetBoard(int[][] initboard){
+        board = initboard;
+    }
+
+    public int[][] GetBoard(){
+        return board;
+    }
+
+    //Prints out 2D array with " "
+    public void printBoard() {
+
+        for(int row = 0; row < N; row++){
+            for(int col = 0; col < N; col++){
+              System.out.print(board[row][col] + " ");
+            }
+            System.out.println();
+            
+          }
+
     }
 
 }

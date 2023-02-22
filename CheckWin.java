@@ -12,7 +12,7 @@ public class CheckWin {
 
     public boolean CheckForWin() {
 
-        if (CheckVertical() || CheckHorizontal() || CheckDiagonal()) {
+        if (CheckVertical() || CheckHorizontal() || CheckDiagonalLeftToRight() || CheckDiagonalRightToLeft()) {
             return true;
         } else {
             return false;
@@ -63,8 +63,8 @@ public class CheckWin {
         return false;
     }
 
-    private boolean CheckDiagonal() {
-        // Check for Diagonal win
+    private boolean CheckDiagonalLeftToRight() {
+        // Check for Diagonal win top left to bottom right
         for (int row = 0; row <= N - M; row++) {
             for (int col = 0; col <= N - M; col++) {
                 int checkM = 0;
@@ -81,6 +81,26 @@ public class CheckWin {
             }
         }
 
+        return false;
+    }
+
+    private boolean CheckDiagonalRightToLeft() {
+        // Check for diagonal win bottom left to top right
+        for (int row = N - 1; row >= M - 1; row--) {
+            for (int col = 0; col <= board[0].length - M; col++) {
+                int checkM = 0;
+                for (int i = 0; i < M; i++) {
+                    if (board[row - i][col + i] == player) {
+                        checkM++;
+                        if (checkM == M) {
+                            return true;
+                        }
+                    } else {
+                        checkM = 0;
+                    }
+                }
+            }
+        }
         return false;
     }
 

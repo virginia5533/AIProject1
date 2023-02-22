@@ -1,9 +1,9 @@
 public class CheckWin {
     int[][] board;
-    char player;
+    int player;
     int M, N;
 
-    public CheckWin(int[][] board, char player, int M, int N) {
+    public CheckWin(int[][] board, int player, int M, int N) {
         this.board = board;
         this.player = player;
         this.M = M;

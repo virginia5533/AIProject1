@@ -45,7 +45,7 @@ public class Board {
         return N;
     }
 
-    public static int GetM(){
+    public int GetM(){
         return M;
     }
 

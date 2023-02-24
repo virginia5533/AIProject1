@@ -33,8 +33,10 @@ public class Player {
 
         int input;
 
+        //while loop while player input is invalid will loop until playable
         while ((isValidCol == false)) {
 
+            //if user (not AI)
             if(isAI == 'N'){
 
             System.out.println("Please enter a number between 1 and " + N);
@@ -45,6 +47,8 @@ public class Player {
                 System.out.println("Please enter a number between 1 and " + N);
                 scanner.next();
             }
+
+            //minus 1 to be index friendly
              input = scanner.nextInt() - 1;
 
             }//User player
@@ -53,14 +57,16 @@ public class Player {
                 System.out.println("/**AI Processing Move**/");
                 //Implement alpha beta pruning and delete input = 1 below
                 input = 1;
-              }
+            }//AI player
 
+            //checks user range depending on size N
             if (input < 0 || input >= N) {
                 System.out.println("Number is out of range, please enter a number between 1 and " + N);
                 continue;
             }
-            // Checks top space of selected column to see if column is full
 
+
+            // Checks top space of selected column to see if column is full
             else {
                 if (board[0][input] != 0) {
                     System.out.println("Column is full");
@@ -69,9 +75,6 @@ public class Player {
                     isValidCol = true;
                 }
             }
-          
-
-
 
         }//while loop
 

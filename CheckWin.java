@@ -10,6 +10,11 @@ public class CheckWin {
         this.N = N;
     }
 
+    public CheckWin(int[][] board, int player){
+        this.board = board;
+        this.player = player;
+    }
+
     public boolean CheckForWin() {
 
         if (CheckVertical() || CheckHorizontal() || CheckDiagonalLeftToRight() || CheckDiagonalRightToLeft()) {

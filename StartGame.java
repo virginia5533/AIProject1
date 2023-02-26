@@ -23,14 +23,14 @@ public class StartGame extends Main {
 
             if (gameBoard.GetH() == 0) {
                 gameBoard
-                        .SetBoard(player.PlayerMove(gameBoard.GetBoard(), gameBoard.GetN(), aiPlayerTurn,'N', scanner));
+                        .SetBoard(player.PlayerMove(gameBoard.GetBoard(), gameBoard.GetN(), aiPlayerTurn,'N', scanner, gameBoard.GetM()));
                 gameOver = checkWin.CheckForWin();
                 gameBoard.SetH(1);
             } else {
                 // Mutates Board with Player Move
                 System.out.println("should be ai move");
                 gameBoard.SetBoard(
-                        aiPlayer.PlayerMove(gameBoard.GetBoard(), gameBoard.GetN(), aiPlayerTurn, 'Y', scanner));
+                        aiPlayer.PlayerMove(gameBoard.GetBoard(), gameBoard.GetN(), aiPlayerTurn, 'Y', scanner, gameBoard.GetM()));
                 gameOver = checkWin.CheckForWin();
                 gameBoard.SetH(0);
 

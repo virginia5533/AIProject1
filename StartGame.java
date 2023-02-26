@@ -1,7 +1,14 @@
 import java.util.Scanner;
 
 public class StartGame extends Main {
-
+    /**
+    * while loop using a gameOver boolean to initiate and maintain gameplay
+    *
+    * @param gameBoard the Game board
+    * @param scanner the Scanner object from main 
+    *
+    * @return void
+    */
     public void Gameplay(Board gameBoard, Scanner scanner) {
 
         Boolean gameOver = false;

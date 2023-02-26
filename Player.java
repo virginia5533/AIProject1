@@ -8,6 +8,18 @@ public class Player {
     AlphaBeta alphaBeta;
     int M;
 
+    /**
+    * Verifies user input and mutates the game board when the move is playable
+    *
+    * @param board the Game board
+    * @param N Board size
+    * @param H player order
+    * @param isAI char that determines if its the agent (Y = is the agent /N = is the user)
+    * @param scanner scanner object
+    * @param M number of tokens to connect
+    
+    * @return board the updated Game board
+    */
     public int[][] PlayerMove(int[][] board, int N, int H, char isAI, Scanner scanner, int M) {
 
         this.M = M;
@@ -30,6 +42,16 @@ public class Player {
 
     }
 
+     /**
+    * Checks the player's input to see if it is playable on the board
+    *
+    * @param isAI char that determines if its the agent (Y = is the agent /N = is the user)
+    * @param board the Game board
+    * @param N Board size
+    * @param scanner scanner object
+    *
+    * @return void
+    */
     public void isValidInput(char isAI, int[][] board, int N, Scanner scanner) {
 
         int input;

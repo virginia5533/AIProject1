@@ -2,6 +2,14 @@ import java.util.Scanner;
 
 public class Main {
 
+
+  /**
+ * Creates game board and calls Start Game.
+ *
+ * @param args String[] for java main function
+ *
+ * @return void
+ */
   public static void main(String[] args) {
 
 

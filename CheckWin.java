@@ -15,6 +15,7 @@ public class CheckWin {
         this.player = player;
     }
 
+    //return boolean if win is true
     public boolean CheckForWin() {
 
         if (CheckVertical() || CheckHorizontal() || CheckDiagonalLeftToRight() || CheckDiagonalRightToLeft()) {

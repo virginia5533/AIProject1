@@ -80,7 +80,7 @@ public class Player {
                 System.out.println("/**AI Processing Move**/");
                 // Implement alpha beta pruning and delete input = 1 below
                 alphaBeta = new AlphaBeta(1, N, M);
-                input = alphaBeta.alphabeta(board, AlphaBeta.maxDepth, -1000, 1000, 1) - 1;
+                input = alphaBeta.alphabeta(board, AlphaBeta.maxDepth, -1000, 1000, 1);
             } // AI player
 
             // checks user range depending on size N

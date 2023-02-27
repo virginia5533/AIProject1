@@ -45,7 +45,14 @@ public class StartGame extends Main {
 
             // prints board
             gameBoard.printBoard();
+            
 
+        }
+        if(gameBoard.GetH() == 0){
+            System.out.println("Player " + 1 + " wins!");
+        }
+        else if(gameBoard.GetH() == 1){
+            System.out.println("Player " + 2 + " wins!");
         }
     }
 

@@ -1,3 +1,10 @@
+/**
+ * This program simulates connectM by taking input from a user and results of alphabeta pruning from an agent.
+ * 
+ * @author Adam Spence and Virginia Vaughan
+ * @date 2/26/23
+ * @info Course CAP4601
+ */
 import java.util.Scanner;
 
 public class Main {

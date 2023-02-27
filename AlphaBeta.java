@@ -64,7 +64,7 @@ public class AlphaBeta {
      */
     public int evaluate(int[][] board) {
         // Count the number of possible winning moves for the AI player
-        CheckWin checkWin = new CheckWin(board, aiPlayer, 2, N);
+        CheckWin checkWin = new CheckWin(board, aiPlayer, M, N);
         int numWins = 0;
         for (int col = 0; col < board.length; col++) {
             if (isValidMove(board, col)) {
